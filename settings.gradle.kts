@@ -17,3 +17,4 @@ dependencyResolutionManagement {
 rootProject.name = "Movies"
 include(":androidApp")
 include(":common")
+include(":domain")
