@@ -1,4 +1,4 @@
-package pl.artoch.domain
+package pl.artoch.domain.models
 
 data class Movie(
     val id: Id,
