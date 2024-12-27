@@ -37,11 +37,7 @@ android {
 }
 
 dependencies {
-    implementation(projects.common)
     implementation(projects.domain)
-    implementation(libs.compose.ui)
-    implementation(libs.compose.ui.tooling.preview)
-    implementation(libs.compose.material3)
-    implementation(libs.androidx.activity.compose)
-    debugImplementation(libs.compose.ui.tooling)
+    implementation(libs.bundles.compose)
+    implementation(libs.bundles.coil)
 }

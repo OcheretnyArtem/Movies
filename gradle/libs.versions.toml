@@ -1,18 +1,24 @@
 [versions]
 agp = "8.7.3"
 kotlin = "2.0.0"
-compose = "1.5.4"
-compose-material3 = "1.1.2"
-androidx-activityCompose = "1.8.0"
+compose-version = "1.7.6"
+compose-material3 = "1.3.1"
+androidx-activityCompose = "1.9.3"
+coil-version = "3.0.4"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
-compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose-version" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose-version" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose-version" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil-version" }
+coil-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil-version" }
+
+[bundles]
+compose = ["androidx-activity-compose", "compose-ui", "compose-ui-tooling", "compose-ui-tooling-preview", "compose-material3"]
+coil = ["coil-compose", "coil-okhttp"]
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
