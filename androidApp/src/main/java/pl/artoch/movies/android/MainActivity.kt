@@ -11,17 +11,22 @@ import pl.artoch.domain.fakes.fakeMovie
 import pl.artoch.movies.android.screens.MoviesListScreen
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             MyApplicationTheme {
+                /*TODO Delete*/
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    /*TODO Delete*/
-                    val movies = List(4) { fakeMovie(id = "$it") }
-                    MoviesListScreen(movies)
+                    val movies = List(7) { fakeMovie(id = "$it") }
+                    MoviesListScreen(
+                        movies,
+                        onMovieClick = {},
+                        onLikeClick = {}
+                    )
                 }
             }
         }
